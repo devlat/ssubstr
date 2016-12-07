@@ -29,7 +29,7 @@ class Search:
 
     def __parse_file(self, pathToFile):
         f = open(pathToFile)
-        if (re.search(self.pattern, f.read())):
+        if (re.search(self.pattern, f.read(), re.IGNORECASE)):
             print pathToFile;
         return 1;
 
